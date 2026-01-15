@@ -32,7 +32,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: d812d430-de21-413d-9630-47ff5a5b3daa
     volumes:
       - ./openfoodfacts-mongodbdump.gz:/openfoodfacts-mongodbdump.gz:ro
-      - ./restore_db.sh:/docker-entrypoint-initdb.d/restore.sh:ro
+      - ./import_db.sh:/docker-entrypoint-initdb.d/import.sh:ro
       - ./data/mongo/:/data/db:rw
     ports:
       - "27017:27017"

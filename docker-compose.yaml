@@ -10,6 +10,7 @@ services:
       - MONGO_HOST=database-api-wrapper-mongodb
       - MONGO_PORT=27017
       - MONGO_DATABASE=off
+      - DEBUG_BYPASS_AUTH_MIDDLEWARE=true
       - GIN_MODE=debug
     build: .
     ports:

@@ -3,9 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 
+	"github.com/SnackLog/auth-lib"
 	"github.com/SnackLog/database-api-wrapper/internal/config"
 	"github.com/SnackLog/database-api-wrapper/internal/database"
+	"github.com/SnackLog/database-api-wrapper/internal/handlers/product"
 	serviceConfigLib "github.com/SnackLog/service-config-lib"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/v2/mongo"
@@ -25,13 +28,11 @@ func loadConfigs() {
 	if err != nil {
 		panic("error while parsing service config: " + err.Error())
 	}
-	fmt.Println("Config loaded successfully:", serviceConfigLib.GetConfig())
 
 	err = config.LoadConfig()
 	if err != nil {
 		panic("error while parsing config: " + err.Error())
 	}
-	fmt.Println("Database config loaded successfully:", config.GetConfig().GetDatabaseConnectionString())
 }
 
 func connectDatabase() *mongo.Client {
@@ -53,7 +54,24 @@ func disconnectDatabase(client *mongo.Client) {
 	}
 }
 
-func setupRouter(*mongo.Client) *gin.Engine {
+func setupRouter(db *mongo.Client) *gin.Engine {
 	r := gin.Default()
+	products := r.Group("/products")
+
+	setupEndpoints(products, db)
+
 	return r
+}
+
+func setupEndpoints(router *gin.RouterGroup, db *mongo.Client) {
+	productController := &product.ProductController{DB: db}
+
+	if serviceConfigLib.GetConfig().DebugBypassAuthMiddleware {
+		log.Println("\033[1;31mWARNING: DEBUG_BYPASS_AUTH_MIDDLEWARE is enabled. Setting up endpoints without authentication!\033[0m")
+		router.GET("/product", productController.Get)
+		router.GET("/product/:id", productController.GetID)
+		return
+	}
+	router.GET("/product", authlib.Authentication, productController.Get)
+	router.GET("/product/:id", authlib.Authentication, productController.GetID)
 }

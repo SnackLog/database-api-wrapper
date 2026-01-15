@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
 
 	"github.com/SnackLog/auth-lib"
@@ -20,7 +19,7 @@ func main() {
 	defer disconnectDatabase(db)
 	router := setupRouter(db)
 
-	router.Run()
+	router.Run(":80")
 }
 
 func loadConfigs() {
@@ -68,10 +67,10 @@ func setupEndpoints(router *gin.RouterGroup, db *mongo.Client) {
 
 	if serviceConfigLib.GetConfig().DebugBypassAuthMiddleware {
 		log.Println("\033[1;31mWARNING: DEBUG_BYPASS_AUTH_MIDDLEWARE is enabled. Setting up endpoints without authentication!\033[0m")
-		router.GET("/product", productController.Get)
-		router.GET("/product/:id", productController.GetID)
+		router.GET("/search", productController.Get)
+		router.GET("/:id", productController.GetID)
 		return
 	}
-	router.GET("/product", authlib.Authentication, productController.Get)
-	router.GET("/product/:id", authlib.Authentication, productController.GetID)
+	router.GET("/search", authlib.Authentication, productController.Get)
+	router.GET("/:id", authlib.Authentication, productController.GetID)
 }

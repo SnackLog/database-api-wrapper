@@ -1,0 +1,17 @@
+services:
+  database-api-wrapper:
+    container_name: database-api-wrapper
+    environment:
+      - SERVICE_CONFIG_APP_NAME=SnackLog
+      - SERVICE_CONFIG_API_ROOT_URL=localhost
+      - SERVICE_CONFIG_SERVICE_NAME=database-api-wrapper
+      - GIN_MODE=debug
+    build: .
+    ports:
+      - 8080:80
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:80/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+

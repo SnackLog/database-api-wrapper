@@ -10,24 +10,19 @@ import (
 	"go.mongodb.org/mongo-driver/v2/mongo/options"
 )
 
-func GetProductByID(db *mongo.Client, id string) (string, error) {
-	bsonResult, err := db.Database("off").Collection("products").FindOne(context.TODO(), bson.M{"_id": id}).Raw()
+func GetProductByID(db *mongo.Client, id string) (*Product, error) {
+	var product *Product = new(Product)
+	err := db.Database("off").Collection("products").FindOne(context.TODO(), bson.M{"_id": id}).Decode(product)
 
 	if err == mongo.ErrNoDocuments {
-		return "", nil
+		return nil, nil
 	}
 
 	if err != nil {
-		return "", fmt.Errorf("failed to find product: %v", err)
+		return nil, fmt.Errorf("failed to find product: %v", err)
 	}
 
-	jsonBytes, err := bson.MarshalExtJSON(bsonResult, false, false)
-
-	if err != nil {
-		return "", fmt.Errorf("failed to marshal product to JSON: %v", err)
-	}
-
-	return string(jsonBytes), nil
+	return product, nil
 }
 
 func SearchProductByName(db *mongo.Client, query string, limit int) (string, error) {

@@ -21,7 +21,7 @@ func GetProductByID(db *mongo.Client, id string) (string, error) {
 		return "", fmt.Errorf("failed to find product: %v", err)
 	}
 
-	jsonBytes, err := bson.MarshalExtJSON(bsonResult, true, false)
+	jsonBytes, err := bson.MarshalExtJSON(bsonResult, false, false)
 
 	if err != nil {
 		return "", fmt.Errorf("failed to marshal product to JSON: %v", err)

@@ -11,7 +11,7 @@ import (
 )
 
 func GetProductByID(db *mongo.Client, id string) (string, error) {
-	bsonResult, err := db.Database("off").Collection("products").FindOne(context.TODO(), map[string]string{"_id": id}).Raw()
+	bsonResult, err := db.Database("off").Collection("products").FindOne(context.TODO(), bson.M{"_id": id}).Raw()
 
 	if err == mongo.ErrNoDocuments {
 		return "", nil

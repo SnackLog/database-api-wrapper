@@ -8,6 +8,7 @@ import (
 	"github.com/SnackLog/database-api-wrapper/internal/config"
 	"github.com/SnackLog/database-api-wrapper/internal/database"
 	"github.com/SnackLog/database-api-wrapper/internal/handlers/product"
+	"github.com/SnackLog/database-api-wrapper/internal/health"
 	serviceConfigLib "github.com/SnackLog/service-config-lib"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/v2/mongo"
@@ -55,7 +56,7 @@ func disconnectDatabase(client *mongo.Client) {
 
 func setupRouter(db *mongo.Client) *gin.Engine {
 	r := gin.Default()
-	setupHealthCheckEndpoint(r)
+	setupHealthCheckEndpoint(db, r)
 
 	products := r.Group("/products")
 	setupEndpoints(products, db)
@@ -63,8 +64,11 @@ func setupRouter(db *mongo.Client) *gin.Engine {
 	return r
 }
 
-func setupHealthCheckEndpoint(router *gin.Engine) {
-	router.GET("/health", )
+func setupHealthCheckEndpoint(db *mongo.Client, router *gin.Engine) {
+	hc := &health.HealthController{
+		DB: db,
+	}
+	router.GET("/health", hc.Get)
 }
 
 func setupEndpoints(router *gin.RouterGroup, db *mongo.Client) {

@@ -1,6 +1,7 @@
 package product
 
 import (
+	"log"
 	"net/http"
 	"strconv"
 
@@ -22,12 +23,14 @@ func (p *ProductController) Get(c *gin.Context) {
 
 	limit, err := strconv.ParseInt(limitString, 10, 32)
 	if err != nil || limit <= 0 || limit >= 100 {
+		log.Println(err)
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Query parameter 'limit' must be a positive integer less than 100"})
 		return
 	}
 
 	productsJSON, err := product.SearchProductByName(p.DB, query, int(limit))
 	if err != nil {
+		log.Println(err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}

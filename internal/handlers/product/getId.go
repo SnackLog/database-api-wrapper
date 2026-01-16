@@ -1,6 +1,8 @@
 package product
 
 import (
+	"log"
+
 	"github.com/SnackLog/database-api-wrapper/internal/database/product"
 	"github.com/gin-gonic/gin"
 )
@@ -14,6 +16,7 @@ func (p *ProductController) GetID(c *gin.Context) {
 
 	productJSON, err := product.GetProductByID(p.DB, id)
 	if err != nil {
+		log.Println(err)
 		c.JSON(500, gin.H{"error": err.Error()})
 		return
 	}

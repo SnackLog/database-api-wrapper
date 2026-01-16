@@ -30,12 +30,17 @@ func (p *ProductController) Get(c *gin.Context) {
 		return
 	}
 
-	productsJSON, err := product.SearchProductByName(p.DB, query, int(limit))
+	products, err := product.SearchProductByName(p.DB, query, int(limit))
 	if err != nil {
 		log.Println(err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
+	if products == nil {
+		log.Println("Products was nil?!")
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": "products was nil."})
+		return
+	}
 
-	c.JSON(http.StatusOK, gin.H{"products": productsJSON})
+	c.JSON(http.StatusOK, gin.H{"products": *products})
 }

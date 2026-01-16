@@ -25,7 +25,7 @@ func GetProductByID(db *mongo.Client, id string) (*Product, error) {
 	return product, nil
 }
 
-func SearchProductByName(db *mongo.Client, query string, limit int) (string, error) {
+func SearchProductByName(db *mongo.Client, query string, limit int) (*[]Product, error) {
 	filter := bson.M{
 		"$text": bson.M{
 			"$search": strings.TrimSpace(query),
@@ -47,23 +47,14 @@ func SearchProductByName(db *mongo.Client, query string, limit int) (string, err
 
 	cursor, err := db.Database("off").Collection("products").Find(context.TODO(), filter, filterOptions)
 	if err != nil {
-		return "", fmt.Errorf("failed to search products: %v", err)
+		return nil, fmt.Errorf("failed to search products: %v", err)
 	}
 	defer cursor.Close(context.TODO())
 
-	var results []bson.M
+	var results []Product
 	if err = cursor.All(context.TODO(), &results); err != nil {
-		return "", fmt.Errorf("failed to decode products: %v", err)
+		return nil, fmt.Errorf("failed to decode products: %v", err)
 	}
 
-	resultsBson := bson.M{
-		"results": results,
-	}
-
-	jsonBytes, err := bson.MarshalExtJSON(resultsBson, true, false)
-	if err != nil {
-		return "", fmt.Errorf("failed to marshal products to JSON: %v", err)
-	}
-
-	return string(jsonBytes), nil
+	return &results, nil
 }

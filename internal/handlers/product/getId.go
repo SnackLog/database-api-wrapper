@@ -15,17 +15,17 @@ func (p *ProductController) GetID(c *gin.Context) {
 		return
 	}
 
-	productJSON, err := product.GetProductByID(p.DB, id)
+	product, err := product.GetProductByID(p.DB, id)
 	if err != nil {
 		log.Println(err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
-	if productJSON == "" {
+	if product == nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": "Product not found"})
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"product": productJSON})
+	c.JSON(http.StatusOK, gin.H{"product": product})
 }

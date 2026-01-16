@@ -42,5 +42,5 @@ func (p *ProductController) Get(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"products": *products})
+	c.JSON(http.StatusOK, gin.H{"products": products})
 }

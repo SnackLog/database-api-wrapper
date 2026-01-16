@@ -55,11 +55,16 @@ func disconnectDatabase(client *mongo.Client) {
 
 func setupRouter(db *mongo.Client) *gin.Engine {
 	r := gin.Default()
-	products := r.Group("/products")
+	setupHealthCheckEndpoint(r)
 
+	products := r.Group("/products")
 	setupEndpoints(products, db)
 
 	return r
+}
+
+func setupHealthCheckEndpoint(router *gin.Engine) {
+	router.GET("/health", )
 }
 
 func setupEndpoints(router *gin.RouterGroup, db *mongo.Client) {

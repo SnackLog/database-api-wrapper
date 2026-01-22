@@ -8,6 +8,20 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// GetID godoc
+// @Summary      Get product by ID
+// @Description  Get a single product by its ID
+// @Tags         products
+// @Accept       json
+// @Produce      json
+// @Param        id   path      string  true  "Product ID"
+// @Success      200  {object}  map[string]product.Product
+// @Failure      400  {object}  map[string]string
+// @Failure      401  {object}  map[string]string
+// @Failure      404  {object}  map[string]string
+// @Failure      500  {object}  map[string]string
+// @Security     Bearer
+// @Router       /products/{id} [get]
 func (p *ProductController) GetID(c *gin.Context) {
 	id := c.Param("id")
 	if id == "" {

@@ -14,6 +14,15 @@ import (
 	"go.mongodb.org/mongo-driver/v2/mongo"
 )
 
+// @title           Database API Wrapper
+// @version         1.0
+// @description     API for accessing the SnackLog product database.
+// @BasePath  /api/v1
+
+// @securityDefinitions.apikey Bearer
+// @in header
+// @name Authorization
+
 func main() {
 	loadConfigs()
 	db := connectDatabase()

@@ -29,6 +29,7 @@
               gotools
               delve
               mongosh
+              go-swag
               go-license-collector.packages.${system}.go-license-collector
             ];
 

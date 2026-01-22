@@ -17,7 +17,6 @@ import (
 // @title           Database API Wrapper
 // @version         1.0
 // @description     API for accessing the SnackLog product database.
-// @host      localhost:80
 // @BasePath  /api/v1
 
 // @securityDefinitions.apikey Bearer

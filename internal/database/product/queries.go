@@ -30,6 +30,7 @@ func SearchProductByName(db *mongo.Client, query string, limit int) (*[]Product,
 		"$text": bson.M{
 			"$search": strings.TrimSpace(query),
 		},
+		"states_tags": "en:nutrition-facts-completed",
 	}
 
 	filterOptions := options.Find()

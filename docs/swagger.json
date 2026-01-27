@@ -3,19 +3,9 @@
     "info": {
         "description": "API for accessing the SnackLog product database.",
         "title": "Database API Wrapper",
-        "termsOfService": "http://swagger.io/terms/",
-        "contact": {
-            "name": "API Support",
-            "url": "http://www.swagger.io/support",
-            "email": "support@swagger.io"
-        },
-        "license": {
-            "name": "Apache 2.0",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-        },
+        "contact": {},
         "version": "1.0"
     },
-    "host": "localhost:80",
     "basePath": "/api/v1",
     "paths": {
         "/products/search": {
@@ -1512,7 +1502,7 @@
                     "type": "string"
                 },
                 "product_quantity": {
-                    "type": "number"
+                    "type": "string"
                 },
                 "product_type": {
                     "type": "string"

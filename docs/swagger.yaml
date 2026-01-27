@@ -892,7 +892,7 @@ definitions:
       product_name_de:
         type: string
       product_quantity:
-        type: number
+        type: string
       product_type:
         type: string
       quantity:
@@ -929,17 +929,9 @@ definitions:
         items: {}
         type: array
     type: object
-host: localhost:80
 info:
-  contact:
-    email: support@swagger.io
-    name: API Support
-    url: http://www.swagger.io/support
+  contact: {}
   description: API for accessing the SnackLog product database.
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
-  termsOfService: http://swagger.io/terms/
   title: Database API Wrapper
   version: "1.0"
 paths:

@@ -37,7 +37,7 @@ type Product struct {
 	UniqueScansN             int           `json:"unique_scans_n" bson:"unique_scans_n,truncate"`
 	FoodGroupsTags           []interface{} `json:"food_groups_tags" bson:"food_groups_tags,truncate"`
 	States                   string        `json:"states" bson:"states"`
-	ProductQuantity          float64       `json:"product_quantity" bson:"product_quantity,truncate"`
+	ProductQuantity          string       `json:"product_quantity" bson:"product_quantity,truncate"`
 	Brands                   string        `json:"brands" bson:"brands"`
 	Quantity                 string        `json:"quantity" bson:"quantity"`
 	EnvironmentalScoreData   struct {

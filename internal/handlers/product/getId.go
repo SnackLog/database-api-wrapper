@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/SnackLog/database-api-wrapper/internal/database/product"
+	"github.com/SnackLog/database-api-wrapper/internal/handlers"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,28 +17,28 @@ import (
 // @Produce      json
 // @Param        id   path      string  true  "Product ID"
 // @Success      200  {object}  map[string]product.Product
-// @Failure      400  {object}  map[string]string
-// @Failure      401  {object}  map[string]string
-// @Failure      404  {object}  map[string]string
-// @Failure      500  {object}  map[string]string
+// @Failure      400  {object}  handlers.Error
+// @Failure      401  {object}  handlers.Error
+// @Failure      404  {object}  handlers.Error
+// @Failure      500  {object}  handlers.Error
 // @Security     Bearer
 // @Router       /products/{id} [get]
 func (p *ProductController) GetID(c *gin.Context) {
 	id := c.Param("id")
 	if id == "" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "ID is required"})
+		c.JSON(http.StatusBadRequest, handlers.Error{Error: "ID is required"})
 		return
 	}
 
 	product, err := product.GetProductByID(p.DB, id)
 	if err != nil {
 		log.Println(err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		c.JSON(http.StatusInternalServerError, handlers.Error{Error: err.Error()})
 		return
 	}
 
 	if product == nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Product not found"})
+		c.JSON(http.StatusNotFound, handlers.Error{Error: "Product not found"})
 		return
 	}
 

@@ -4,610 +4,8 @@ definitions:
     properties:
       _id:
         type: string
-      _keywords:
-        items:
-          type: string
-        type: array
-      allergens:
-        type: string
-      allergens_from_ingredients:
-        type: string
-      allergens_from_user:
-        type: string
-      allergens_hierarchy:
-        items: {}
-        type: array
-      allergens_tags:
-        items: {}
-        type: array
       brands:
         type: string
-      brands_hierarchy:
-        items:
-          type: string
-        type: array
-      brands_lc:
-        type: string
-      brands_old:
-        type: string
-      brands_tags:
-        items:
-          type: string
-        type: array
-      categories_properties:
-        type: object
-      categories_properties_tags:
-        items:
-          type: string
-        type: array
-      checkers_tags:
-        items: {}
-        type: array
-      code:
-        type: string
-      codes_tags:
-        items:
-          type: string
-        type: array
-      complete:
-        type: integer
-      completeness:
-        type: number
-      countries:
-        type: string
-      countries_hierarchy:
-        items:
-          type: string
-        type: array
-      countries_lc:
-        type: string
-      countries_tags:
-        items:
-          type: string
-        type: array
-      created_t:
-        type: integer
-      data_quality_info_tags:
-        items:
-          type: string
-        type: array
-      data_quality_tags:
-        items:
-          type: string
-        type: array
-      data_sources_tags:
-        items:
-          type: string
-        type: array
-      ecoscore_tags:
-        items:
-          type: string
-        type: array
-      entry_dates_tags:
-        items:
-          type: string
-        type: array
-      environmental_score_data:
-        properties:
-          adjustments:
-            properties:
-              origins_of_ingredients:
-                properties:
-                  aggregated_origins:
-                    items:
-                      properties:
-                        origin:
-                          type: string
-                        percent:
-                          type: integer
-                      type: object
-                    type: array
-                  epi_score:
-                    type: integer
-                  epi_value:
-                    type: integer
-                  origins_from_categories:
-                    items:
-                      type: string
-                    type: array
-                  origins_from_origins_field:
-                    items:
-                      type: string
-                    type: array
-                  transportation_scores:
-                    properties:
-                      ad:
-                        type: number
-                      al:
-                        type: number
-                      at:
-                        type: number
-                      ax:
-                        type: number
-                      ba:
-                        type: number
-                      be:
-                        type: number
-                      bg:
-                        type: number
-                      ch:
-                        type: number
-                      cy:
-                        type: number
-                      cz:
-                        type: number
-                      de:
-                        type: number
-                      dk:
-                        type: number
-                      dz:
-                        type: number
-                      ee:
-                        type: number
-                      eg:
-                        type: number
-                      es:
-                        type: number
-                      fi:
-                        type: number
-                      fo:
-                        type: number
-                      fr:
-                        type: number
-                      gg:
-                        type: number
-                      gi:
-                        type: number
-                      gr:
-                        type: number
-                      hr:
-                        type: number
-                      hu:
-                        type: number
-                      ie:
-                        type: number
-                      il:
-                        type: number
-                      im:
-                        type: number
-                      is:
-                        type: number
-                      it:
-                        type: number
-                      je:
-                        type: number
-                      lb:
-                        type: number
-                      li:
-                        type: number
-                      lt:
-                        type: number
-                      lu:
-                        type: number
-                      lv:
-                        type: number
-                      ly:
-                        type: number
-                      ma:
-                        type: number
-                      mc:
-                        type: number
-                      md:
-                        type: number
-                      me:
-                        type: number
-                      mk:
-                        type: number
-                      mt:
-                        type: number
-                      nl:
-                        type: number
-                      "no":
-                        type: number
-                      pl:
-                        type: number
-                      ps:
-                        type: number
-                      pt:
-                        type: number
-                      ro:
-                        type: number
-                      rs:
-                        type: number
-                      se:
-                        type: number
-                      si:
-                        type: number
-                      sj:
-                        type: number
-                      sk:
-                        type: number
-                      sm:
-                        type: number
-                      sy:
-                        type: number
-                      tn:
-                        type: number
-                      tr:
-                        type: number
-                      ua:
-                        type: number
-                      uk:
-                        type: number
-                      us:
-                        type: number
-                      va:
-                        type: number
-                      world:
-                        type: number
-                      xk:
-                        type: number
-                    type: object
-                  transportation_values:
-                    properties:
-                      ad:
-                        type: integer
-                      al:
-                        type: integer
-                      at:
-                        type: integer
-                      ax:
-                        type: integer
-                      ba:
-                        type: integer
-                      be:
-                        type: integer
-                      bg:
-                        type: integer
-                      ch:
-                        type: integer
-                      cy:
-                        type: integer
-                      cz:
-                        type: integer
-                      de:
-                        type: integer
-                      dk:
-                        type: integer
-                      dz:
-                        type: integer
-                      ee:
-                        type: integer
-                      eg:
-                        type: integer
-                      es:
-                        type: integer
-                      fi:
-                        type: integer
-                      fo:
-                        type: integer
-                      fr:
-                        type: integer
-                      gg:
-                        type: integer
-                      gi:
-                        type: integer
-                      gr:
-                        type: integer
-                      hr:
-                        type: integer
-                      hu:
-                        type: integer
-                      ie:
-                        type: integer
-                      il:
-                        type: integer
-                      im:
-                        type: integer
-                      is:
-                        type: integer
-                      it:
-                        type: integer
-                      je:
-                        type: integer
-                      lb:
-                        type: integer
-                      li:
-                        type: integer
-                      lt:
-                        type: integer
-                      lu:
-                        type: integer
-                      lv:
-                        type: integer
-                      ly:
-                        type: integer
-                      ma:
-                        type: integer
-                      mc:
-                        type: integer
-                      md:
-                        type: integer
-                      me:
-                        type: integer
-                      mk:
-                        type: integer
-                      mt:
-                        type: integer
-                      nl:
-                        type: integer
-                      "no":
-                        type: integer
-                      pl:
-                        type: integer
-                      ps:
-                        type: integer
-                      pt:
-                        type: integer
-                      ro:
-                        type: integer
-                      rs:
-                        type: integer
-                      se:
-                        type: integer
-                      si:
-                        type: integer
-                      sj:
-                        type: integer
-                      sk:
-                        type: integer
-                      sm:
-                        type: integer
-                      sy:
-                        type: integer
-                      tn:
-                        type: integer
-                      tr:
-                        type: integer
-                      ua:
-                        type: integer
-                      uk:
-                        type: integer
-                      us:
-                        type: integer
-                      va:
-                        type: integer
-                      world:
-                        type: integer
-                      xk:
-                        type: integer
-                    type: object
-                  values:
-                    properties:
-                      ad:
-                        type: integer
-                      al:
-                        type: integer
-                      at:
-                        type: integer
-                      ax:
-                        type: integer
-                      ba:
-                        type: integer
-                      be:
-                        type: integer
-                      bg:
-                        type: integer
-                      ch:
-                        type: integer
-                      cy:
-                        type: integer
-                      cz:
-                        type: integer
-                      de:
-                        type: integer
-                      dk:
-                        type: integer
-                      dz:
-                        type: integer
-                      ee:
-                        type: integer
-                      eg:
-                        type: integer
-                      es:
-                        type: integer
-                      fi:
-                        type: integer
-                      fo:
-                        type: integer
-                      fr:
-                        type: integer
-                      gg:
-                        type: integer
-                      gi:
-                        type: integer
-                      gr:
-                        type: integer
-                      hr:
-                        type: integer
-                      hu:
-                        type: integer
-                      ie:
-                        type: integer
-                      il:
-                        type: integer
-                      im:
-                        type: integer
-                      is:
-                        type: integer
-                      it:
-                        type: integer
-                      je:
-                        type: integer
-                      lb:
-                        type: integer
-                      li:
-                        type: integer
-                      lt:
-                        type: integer
-                      lu:
-                        type: integer
-                      lv:
-                        type: integer
-                      ly:
-                        type: integer
-                      ma:
-                        type: integer
-                      mc:
-                        type: integer
-                      md:
-                        type: integer
-                      me:
-                        type: integer
-                      mk:
-                        type: integer
-                      mt:
-                        type: integer
-                      nl:
-                        type: integer
-                      "no":
-                        type: integer
-                      pl:
-                        type: integer
-                      ps:
-                        type: integer
-                      pt:
-                        type: integer
-                      ro:
-                        type: integer
-                      rs:
-                        type: integer
-                      se:
-                        type: integer
-                      si:
-                        type: integer
-                      sj:
-                        type: integer
-                      sk:
-                        type: integer
-                      sm:
-                        type: integer
-                      sy:
-                        type: integer
-                      tn:
-                        type: integer
-                      tr:
-                        type: integer
-                      ua:
-                        type: integer
-                      uk:
-                        type: integer
-                      us:
-                        type: integer
-                      va:
-                        type: integer
-                      world:
-                        type: integer
-                      xk:
-                        type: integer
-                    type: object
-                  warning:
-                    type: string
-                type: object
-              packaging:
-                properties:
-                  value:
-                    type: integer
-                  warning:
-                    type: string
-                type: object
-              production_system:
-                properties:
-                  labels:
-                    items: {}
-                    type: array
-                  value:
-                    type: integer
-                  warning:
-                    type: string
-                type: object
-              threatened_species:
-                properties:
-                  warning:
-                    type: string
-                type: object
-            type: object
-          agribalyse:
-            properties:
-              warning:
-                type: string
-            type: object
-          grade:
-            type: string
-          missing:
-            properties:
-              categories:
-                type: integer
-              ingredients:
-                type: integer
-              labels:
-                type: integer
-              origins:
-                type: integer
-              packagings:
-                type: integer
-            type: object
-          missing_agribalyse_match_warning:
-            type: integer
-          missing_key_data:
-            type: integer
-          status:
-            type: string
-        type: object
-      environmental_score_grade:
-        type: string
-      environmental_score_tags:
-        items:
-          type: string
-        type: array
-      food_groups_tags:
-        items: {}
-        type: array
-      id:
-        type: string
-      informers_tags:
-        items:
-          type: string
-        type: array
-      lang:
-        type: string
-      languages_hierarchy:
-        items:
-          type: string
-        type: array
-      languages_tags:
-        items:
-          type: string
-        type: array
-      last_edit_dates_tags:
-        items:
-          type: string
-        type: array
-      last_modified_t:
-        type: integer
-      last_updated_t:
-        type: integer
-      lc:
-        type: string
-      main_countries_tags:
-        items: {}
-        type: array
-      max_imgid:
-        type: string
-      misc_tags:
-        items:
-          type: string
-        type: array
-      no_nutrition_data:
-        type: string
-      nova_group_debug:
-        type: string
-      nova_groups_tags:
-        items:
-          type: string
-        type: array
-      nutrient_levels:
-        type: object
       nutriments:
         properties:
           carbohydrates:
@@ -741,205 +139,105 @@ definitions:
           trans-fat_value:
             type: number
         type: object
-      nutriscore:
+      nutriments_estimated:
         properties:
-          "2021":
-            properties:
-              category_available:
-                type: integer
-              data:
-                properties:
-                  energy:
-                    type: integer
-                  fiber:
-                    type: integer
-                  fruits_vegetables_nuts_colza_walnut_olive_oils:
-                    type: integer
-                  is_beverage:
-                    type: integer
-                  is_cheese:
-                    type: integer
-                  is_fat:
-                    type: integer
-                  is_water:
-                    type: integer
-                  proteins:
-                    type: integer
-                  saturated_fat:
-                    type: integer
-                  saturated_fat_ratio:
-                    type: integer
-                  sodium: {}
-                  sugars:
-                    type: number
-                type: object
-              grade:
-                type: string
-              nutrients_available:
-                type: integer
-              nutriscore_applicable:
-                type: integer
-              nutriscore_computed:
-                type: integer
-            type: object
-          "2023":
-            properties:
-              category_available:
-                type: integer
-              data:
-                properties:
-                  energy:
-                    type: integer
-                  fiber: {}
-                  fruits_vegetables_legumes: {}
-                  is_beverage:
-                    type: integer
-                  is_cheese:
-                    type: integer
-                  is_fat_oil_nuts_seeds:
-                    type: integer
-                  is_red_meat_product:
-                    type: integer
-                  is_water:
-                    type: integer
-                  proteins:
-                    type: integer
-                  salt: {}
-                  saturated_fat:
-                    type: integer
-                  saturated_fat_ratio:
-                    type: integer
-                  sugars:
-                    type: number
-                type: object
-              grade:
-                type: string
-              nutrients_available:
-                type: integer
-              nutriscore_applicable:
-                type: integer
-              nutriscore_computed:
-                type: integer
-            type: object
+          alcohol_100g:
+            type: number
+          beta-carotene_100g:
+            type: number
+          calcium_100g:
+            type: number
+          carbohydrates_100g:
+            type: number
+          cholesterol_100g:
+            type: number
+          copper_100g:
+            type: number
+          energy-kcal_100g:
+            type: number
+          energy-kj_100g:
+            type: number
+          energy_100g:
+            type: number
+          fat_100g:
+            type: number
+          fiber_100g:
+            type: number
+          fructose_100g:
+            type: number
+          galactose_100g:
+            type: number
+          glucose_100g:
+            type: number
+          iodine_100g:
+            type: number
+          iron_100g:
+            type: number
+          lactose_100g:
+            type: number
+          magnesium_100g:
+            type: number
+          maltose_100g:
+            type: number
+          manganese_100g:
+            type: number
+          pantothenic-acid_100g:
+            type: number
+          phosphorus_100g:
+            type: number
+          phylloquinone_100g:
+            type: number
+          polyols_100g:
+            type: number
+          potassium_100g:
+            type: number
+          proteins_100g:
+            type: number
+          salt_100g:
+            type: number
+          saturated-fat_100g:
+            type: number
+          selenium_100g:
+            type: number
+          sodium_100g:
+            type: number
+          starch_100g:
+            type: number
+          sucrose_100g:
+            type: number
+          sugars_100g:
+            type: number
+          vitamin-a_100g:
+            type: number
+          vitamin-b1_100g:
+            type: number
+          vitamin-b2_100g:
+            type: number
+          vitamin-b6_100g:
+            type: number
+          vitamin-b9_100g:
+            type: number
+          vitamin-b12_100g:
+            type: number
+          vitamin-c_100g:
+            type: number
+          vitamin-d_100g:
+            type: number
+          vitamin-e_100g:
+            type: number
+          vitamin-pp_100g:
+            type: number
+          water_100g:
+            type: number
+          zinc_100g:
+            type: number
         type: object
-      nutriscore_2021_tags:
-        items:
-          type: string
-        type: array
-      nutriscore_2023_tags:
-        items:
-          type: string
-        type: array
-      nutriscore_grade:
-        type: string
-      nutriscore_tags:
-        items:
-          type: string
-        type: array
-      nutriscore_version:
-        type: string
-      nutrition_data:
-        type: string
-      nutrition_data_per:
-        type: string
-      nutrition_data_prepared_per:
-        type: string
-      nutrition_grade_fr:
-        type: string
-      nutrition_grades:
-        type: string
-      nutrition_grades_tags:
-        items:
-          type: string
-        type: array
-      nutrition_score_beverage:
-        type: integer
-      nutrition_score_warning_no_fiber:
-        type: integer
-      nutrition_score_warning_no_fruits_vegetables_nuts:
-        type: integer
-      packaging_materials_tags:
-        items: {}
-        type: array
-      packaging_recycling_tags:
-        items: {}
-        type: array
-      packagings:
-        items: {}
-        type: array
-      packagings_materials:
-        type: object
-      pnns_groups_1:
-        type: string
-      pnns_groups_1_tags:
-        items:
-          type: string
-        type: array
-      pnns_groups_2:
-        type: string
-      pnns_groups_2_tags:
-        items:
-          type: string
-        type: array
-      popularity_key:
-        type: integer
-      popularity_tags:
-        items:
-          type: string
-        type: array
       product_name:
         type: string
-      product_name_de:
-        type: string
-      product_quantity:
-        type: number
-      product_type:
-        type: string
-      quantity:
-        type: string
-      rev:
-        type: integer
-      scans_n:
-        type: integer
-      serving_quantity:
-        type: number
-      serving_quantity_unit:
-        type: string
-      serving_size:
-        type: string
-      states:
-        type: string
-      states_tags:
-        items:
-          type: string
-        type: array
-      traces:
-        type: string
-      traces_from_ingredients:
-        type: string
-      traces_tags:
-        items: {}
-        type: array
-      unique_scans_n:
-        type: integer
-      unknown_nutrients_tags:
-        items: {}
-        type: array
-      weighers_tags:
-        items: {}
-        type: array
     type: object
-host: localhost:80
 info:
-  contact:
-    email: support@swagger.io
-    name: API Support
-    url: http://www.swagger.io/support
+  contact: {}
   description: API for accessing the SnackLog product database.
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
-  termsOfService: http://swagger.io/terms/
   title: Database API Wrapper
   version: "1.0"
 paths:

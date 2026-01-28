@@ -10,6 +10,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+type productGetResponse struct {
+	Products []product.Product `json:"products"`
+}
+
 // Get godoc
 // @Summary      Search products
 // @Description  Search for products by name
@@ -18,7 +22,7 @@ import (
 // @Produce      json
 // @Param        q      query     string  true  "Search query (min 3 chars)"
 // @Param        limit  query     int     false "Limit results (default 10, max 100)"
-// @Success      200  {object}  map[string][]product.Product
+// @Success      200  {object}  productGetResponse
 // @Failure      400  {object}  handlers.Error
 // @Failure      401  {object}  handlers.Error
 // @Failure      500  {object}  handlers.Error
@@ -57,5 +61,5 @@ func (p *ProductController) Get(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"products": products})
+	c.JSON(http.StatusOK, productGetResponse{Products: *products})
 }

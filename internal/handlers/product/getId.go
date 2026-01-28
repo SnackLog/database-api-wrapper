@@ -9,6 +9,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+type getProductByIdResponse struct {
+	Product product.Product `json:"product"`
+}
+
 // GetID godoc
 // @Summary      Get product by ID
 // @Description  Get a single product by its ID
@@ -16,7 +20,7 @@ import (
 // @Accept       json
 // @Produce      json
 // @Param        id   path      string  true  "Product ID"
-// @Success      200  {object}  map[string]product.Product
+// @Success      200  {object}  getProductByIdResponse
 // @Failure      400  {object}  handlers.Error
 // @Failure      401  {object}  handlers.Error
 // @Failure      404  {object}  handlers.Error
@@ -42,5 +46,5 @@ func (p *ProductController) GetID(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"product": product})
+	c.JSON(http.StatusOK, getProductByIdResponse{Product: *product})
 }

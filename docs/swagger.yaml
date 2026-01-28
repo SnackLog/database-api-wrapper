@@ -1,5 +1,10 @@
 basePath: /api/v1
 definitions:
+  handlers.Error:
+    properties:
+      error:
+        type: string
+    type: object
   product.Product:
     properties:
       _id:
@@ -235,6 +240,18 @@ definitions:
       product_name:
         type: string
     type: object
+  product.getProductByIdResponse:
+    properties:
+      product:
+        $ref: '#/definitions/product.Product'
+    type: object
+  product.productGetResponse:
+    properties:
+      products:
+        items:
+          $ref: '#/definitions/product.Product'
+        type: array
+    type: object
 info:
   contact: {}
   description: API for accessing the SnackLog product database.
@@ -258,33 +275,23 @@ paths:
         "200":
           description: OK
           schema:
-            additionalProperties:
-              $ref: '#/definitions/product.Product'
-            type: object
+            $ref: '#/definitions/product.getProductByIdResponse'
         "400":
           description: Bad Request
           schema:
-            additionalProperties:
-              type: string
-            type: object
+            $ref: '#/definitions/handlers.Error'
         "401":
           description: Unauthorized
           schema:
-            additionalProperties:
-              type: string
-            type: object
+            $ref: '#/definitions/handlers.Error'
         "404":
           description: Not Found
           schema:
-            additionalProperties:
-              type: string
-            type: object
+            $ref: '#/definitions/handlers.Error'
         "500":
           description: Internal Server Error
           schema:
-            additionalProperties:
-              type: string
-            type: object
+            $ref: '#/definitions/handlers.Error'
       security:
       - Bearer: []
       summary: Get product by ID
@@ -311,29 +318,19 @@ paths:
         "200":
           description: OK
           schema:
-            additionalProperties:
-              items:
-                $ref: '#/definitions/product.Product'
-              type: array
-            type: object
+            $ref: '#/definitions/product.productGetResponse'
         "400":
           description: Bad Request
           schema:
-            additionalProperties:
-              type: string
-            type: object
+            $ref: '#/definitions/handlers.Error'
         "401":
           description: Unauthorized
           schema:
-            additionalProperties:
-              type: string
-            type: object
+            $ref: '#/definitions/handlers.Error'
         "500":
           description: Internal Server Error
           schema:
-            additionalProperties:
-              type: string
-            type: object
+            $ref: '#/definitions/handlers.Error'
       security:
       - Bearer: []
       summary: Search products

@@ -10,6 +10,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+type productGetResponse struct {
+	Products []product.Product `json:"products"`
+}
+
 // Get godoc
 // @Summary      Search products
 // @Description  Search for products by name
@@ -57,5 +61,5 @@ func (p *ProductController) Get(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"products": products})
+	c.JSON(http.StatusOK, productGetResponse{Products: *products})
 }

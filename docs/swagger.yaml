@@ -240,6 +240,18 @@ definitions:
       product_name:
         type: string
     type: object
+  product.getProductByIdResponse:
+    properties:
+      product:
+        $ref: '#/definitions/product.Product'
+    type: object
+  product.productGetResponse:
+    properties:
+      products:
+        items:
+          $ref: '#/definitions/product.Product'
+        type: array
+    type: object
 info:
   contact: {}
   description: API for accessing the SnackLog product database.
@@ -263,9 +275,7 @@ paths:
         "200":
           description: OK
           schema:
-            additionalProperties:
-              $ref: '#/definitions/product.Product'
-            type: object
+            $ref: '#/definitions/product.getProductByIdResponse'
         "400":
           description: Bad Request
           schema:
@@ -308,11 +318,7 @@ paths:
         "200":
           description: OK
           schema:
-            additionalProperties:
-              items:
-                $ref: '#/definitions/product.Product'
-              type: array
-            type: object
+            $ref: '#/definitions/product.productGetResponse'
         "400":
           description: Bad Request
           schema:

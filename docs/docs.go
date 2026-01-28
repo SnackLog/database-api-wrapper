@@ -52,13 +52,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/product.Product"
-                                }
-                            }
+                            "$ref": "#/definitions/product.productGetResponse"
                         }
                     },
                     "400": {
@@ -113,10 +107,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "$ref": "#/definitions/product.Product"
-                            }
+                            "$ref": "#/definitions/product.getProductByIdResponse"
                         }
                     },
                     "400": {
@@ -507,6 +498,25 @@ const docTemplate = `{
                 },
                 "product_name": {
                     "type": "string"
+                }
+            }
+        },
+        "product.getProductByIdResponse": {
+            "type": "object",
+            "properties": {
+                "product": {
+                    "$ref": "#/definitions/product.Product"
+                }
+            }
+        },
+        "product.productGetResponse": {
+            "type": "object",
+            "properties": {
+                "products": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/product.Product"
+                    }
                 }
             }
         }

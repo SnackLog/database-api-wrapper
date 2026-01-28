@@ -20,7 +20,7 @@ type getProductByIdResponse struct {
 // @Accept       json
 // @Produce      json
 // @Param        id   path      string  true  "Product ID"
-// @Success      200  {object}  map[string]product.Product
+// @Success      200  {object}  getProductByIdResponse
 // @Failure      400  {object}  handlers.Error
 // @Failure      401  {object}  handlers.Error
 // @Failure      404  {object}  handlers.Error

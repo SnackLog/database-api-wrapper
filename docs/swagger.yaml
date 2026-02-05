@@ -141,9 +141,13 @@ definitions:
             type: number
           fructose_100g:
             type: number
+          fruits-vegetables-legumes-estimate-from-ingredients_100g:
+            type: number
           fruits-vegetables-nuts:
             type: number
           fruits-vegetables-nuts_100g:
+            type: number
+          galactose_100g:
             type: number
           gamma-linolenic-acid:
             type: number
@@ -225,6 +229,8 @@ definitions:
             type: number
           nervonic-acid_100g:
             type: number
+          nova-group:
+            type: number
           nucleotides:
             type: number
           nucleotides_100g:
@@ -268,6 +274,8 @@ definitions:
           phosphorus:
             type: number
           phosphorus_100g:
+            type: number
+          phylloquinone_100g:
             type: number
           polyols:
             type: number
@@ -372,6 +380,8 @@ definitions:
           vitamin-pp:
             type: number
           vitamin-pp_100g:
+            type: number
+          water_100g:
             type: number
           zinc:
             type: number
@@ -508,9 +518,13 @@ definitions:
             type: number
           fructose_100g:
             type: number
+          fruits-vegetables-legumes-estimate-from-ingredients_100g:
+            type: number
           fruits-vegetables-nuts:
             type: number
           fruits-vegetables-nuts_100g:
+            type: number
+          galactose_100g:
             type: number
           gamma-linolenic-acid:
             type: number
@@ -592,6 +606,8 @@ definitions:
             type: number
           nervonic-acid_100g:
             type: number
+          nova-group:
+            type: number
           nucleotides:
             type: number
           nucleotides_100g:
@@ -635,6 +651,8 @@ definitions:
           phosphorus:
             type: number
           phosphorus_100g:
+            type: number
+          phylloquinone_100g:
             type: number
           polyols:
             type: number
@@ -739,6 +757,8 @@ definitions:
           vitamin-pp:
             type: number
           vitamin-pp_100g:
+            type: number
+          water_100g:
             type: number
           zinc:
             type: number

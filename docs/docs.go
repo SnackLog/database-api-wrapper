@@ -498,6 +498,9 @@ const docTemplate = `{
                 },
                 "product_name": {
                     "type": "string"
+                },
+                "quantity": {
+                    "type": "string"
                 }
             }
         },

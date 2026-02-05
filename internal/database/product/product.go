@@ -272,8 +272,6 @@ type Product struct {
 		Omega6Fat                    float64 `json:"omega-6-fat" bson:"omega-6-fat"`
 		LinoleicAcid100g             float64 `json:"linoleic-acid_100g" bson:"linoleic-acid_100g"`
 		LinoleicAcid                 float64 `json:"linoleic-acid" bson:"linoleic-acid"`
-		ArachidonicAcid100g          float64 `json:"arachidonic-acid_100g" bson:"arachidonic-acid_100g"`
-		ArachidonicAcid              float64 `json:"arachidonic-acid" bson:"arachidonic-acid"`
 		GammaLinolenicAcid100g       float64 `json:"gamma-linolenic-acid_100g" bson:"gamma-linolenic-acid_100g"`
 		GammaLinolenicAcid           float64 `json:"gamma-linolenic-acid" bson:"gamma-linolenic-acid"`
 		DihomoGammaLinolenicAcid100g float64 `json:"dihomo-gamma-linolenic-acid_100g" bson:"dihomo-gamma-linolenic-acid_100g"`

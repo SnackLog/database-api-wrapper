@@ -491,6 +491,9 @@
                 },
                 "product_name": {
                     "type": "string"
+                },
+                "quantity": {
+                    "type": "string"
                 }
             }
         },

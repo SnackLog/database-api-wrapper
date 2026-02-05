@@ -351,10 +351,16 @@ const docTemplate = `{
                         "fructose_100g": {
                             "type": "number"
                         },
+                        "fruits-vegetables-legumes-estimate-from-ingredients_100g": {
+                            "type": "number"
+                        },
                         "fruits-vegetables-nuts": {
                             "type": "number"
                         },
                         "fruits-vegetables-nuts_100g": {
+                            "type": "number"
+                        },
+                        "galactose_100g": {
                             "type": "number"
                         },
                         "gamma-linolenic-acid": {
@@ -477,6 +483,9 @@ const docTemplate = `{
                         "nervonic-acid_100g": {
                             "type": "number"
                         },
+                        "nova-group": {
+                            "type": "number"
+                        },
                         "nucleotides": {
                             "type": "number"
                         },
@@ -541,6 +550,9 @@ const docTemplate = `{
                             "type": "number"
                         },
                         "phosphorus_100g": {
+                            "type": "number"
+                        },
+                        "phylloquinone_100g": {
                             "type": "number"
                         },
                         "polyols": {
@@ -697,6 +709,9 @@ const docTemplate = `{
                             "type": "number"
                         },
                         "vitamin-pp_100g": {
+                            "type": "number"
+                        },
+                        "water_100g": {
                             "type": "number"
                         },
                         "zinc": {
@@ -902,10 +917,16 @@ const docTemplate = `{
                         "fructose_100g": {
                             "type": "number"
                         },
+                        "fruits-vegetables-legumes-estimate-from-ingredients_100g": {
+                            "type": "number"
+                        },
                         "fruits-vegetables-nuts": {
                             "type": "number"
                         },
                         "fruits-vegetables-nuts_100g": {
+                            "type": "number"
+                        },
+                        "galactose_100g": {
                             "type": "number"
                         },
                         "gamma-linolenic-acid": {
@@ -1028,6 +1049,9 @@ const docTemplate = `{
                         "nervonic-acid_100g": {
                             "type": "number"
                         },
+                        "nova-group": {
+                            "type": "number"
+                        },
                         "nucleotides": {
                             "type": "number"
                         },
@@ -1092,6 +1116,9 @@ const docTemplate = `{
                             "type": "number"
                         },
                         "phosphorus_100g": {
+                            "type": "number"
+                        },
+                        "phylloquinone_100g": {
                             "type": "number"
                         },
                         "polyols": {
@@ -1248,6 +1275,9 @@ const docTemplate = `{
                             "type": "number"
                         },
                         "vitamin-pp_100g": {
+                            "type": "number"
+                        },
+                        "water_100g": {
                             "type": "number"
                         },
                         "zinc": {

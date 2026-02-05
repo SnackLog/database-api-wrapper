@@ -188,6 +188,12 @@ type Product struct {
 		NutritionScoreFr             float64 `json:"nutrition-score-fr" bson:"nutrition-score-fr"`
 		NutritionScoreUk100g         float64 `json:"nutrition-score-uk_100g" bson:"nutrition-score-uk_100g"`
 		NutritionScoreUk             float64 `json:"nutrition-score-uk" bson:"nutrition-score-uk"`
+
+		FruitsVegetablesLegumesEstimateFromIngredients100g float64 `json:"fruits-vegetables-legumes-estimate-from-ingredients_100g" bson:"fruits-vegetables-legumes-estimate-from-ingredients_100g,truncate"`
+		Galactose_100g                                     float64 `json:"galactose_100g" bson:"galactose_100g"`
+		NovaGroup                                          float64 `json:"nova-group" bson:"nova-group,truncate"`
+		Phylloquinone_100g                                 float64 `json:"phylloquinone_100g" bson:"phylloquinone_100g"`
+		Water_100g                                         float64 `json:"water_100g" bson:"water_100g"`
 	}
 	NutrimentsEstimated struct {
 		Energy100g                   float64 `json:"energy_100g" bson:"energy_100g"`
@@ -372,5 +378,11 @@ type Product struct {
 		NutritionScoreFr             float64 `json:"nutrition-score-fr" bson:"nutrition-score-fr"`
 		NutritionScoreUk100g         float64 `json:"nutrition-score-uk_100g" bson:"nutrition-score-uk_100g"`
 		NutritionScoreUk             float64 `json:"nutrition-score-uk" bson:"nutrition-score-uk"`
+
+		FruitsVegetablesLegumesEstimateFromIngredients100g float64 `json:"fruits-vegetables-legumes-estimate-from-ingredients_100g" bson:"fruits-vegetables-legumes-estimate-from-ingredients_100g,truncate"`
+		Galactose_100g                                     float64 `json:"galactose_100g" bson:"galactose_100g"`
+		NovaGroup                                          float64 `json:"nova-group" bson:"nova-group,truncate"`
+		Phylloquinone_100g                                 float64 `json:"phylloquinone_100g" bson:"phylloquinone_100g"`
+		Water_100g                                         float64 `json:"water_100g" bson:"water_100g"`
 	} `json:"nutriments_estimated" bson:"nutriments_estimated"`
 }

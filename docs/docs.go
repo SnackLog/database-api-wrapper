@@ -159,19 +159,148 @@ const docTemplate = `{
                 "nutriments": {
                     "type": "object",
                     "properties": {
+                        "alcohol": {
+                            "type": "number"
+                        },
+                        "alcohol_100g": {
+                            "type": "number"
+                        },
+                        "alpha-linolenic-acid": {
+                            "type": "number"
+                        },
+                        "alpha-linolenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "arachidic-acid": {
+                            "type": "number"
+                        },
+                        "arachidic-acid_100g": {
+                            "type": "number"
+                        },
+                        "behenic-acid": {
+                            "type": "number"
+                        },
+                        "behenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "bicarbonate": {
+                            "type": "number"
+                        },
+                        "bicarbonate_100g": {
+                            "type": "number"
+                        },
+                        "biotin": {
+                            "type": "number"
+                        },
+                        "biotin_100g": {
+                            "type": "number"
+                        },
+                        "butyric-acid": {
+                            "type": "number"
+                        },
+                        "butyric-acid_100g": {
+                            "type": "number"
+                        },
+                        "caffeine": {
+                            "type": "number"
+                        },
+                        "caffeine_100g": {
+                            "type": "number"
+                        },
+                        "calcium": {
+                            "type": "number"
+                        },
+                        "calcium_100g": {
+                            "type": "number"
+                        },
+                        "capric-acid": {
+                            "type": "number"
+                        },
+                        "capric-acid_100g": {
+                            "type": "number"
+                        },
+                        "caproic-acid": {
+                            "type": "number"
+                        },
+                        "caproic-acid_100g": {
+                            "type": "number"
+                        },
+                        "caprylic-acid": {
+                            "type": "number"
+                        },
+                        "caprylic-acid_100g": {
+                            "type": "number"
+                        },
                         "carbohydrates": {
                             "type": "number"
                         },
                         "carbohydrates_100g": {
                             "type": "number"
                         },
-                        "carbohydrates_serving": {
+                        "carbon-footprint": {
                             "type": "number"
                         },
-                        "carbohydrates_unit": {
-                            "type": "string"
+                        "carbon-footprint_100g": {
+                            "type": "number"
                         },
-                        "carbohydrates_value": {
+                        "casein": {
+                            "type": "number"
+                        },
+                        "casein_100g": {
+                            "type": "number"
+                        },
+                        "cerotic-acid": {
+                            "type": "number"
+                        },
+                        "cerotic-acid_100g": {
+                            "type": "number"
+                        },
+                        "chloride": {
+                            "type": "number"
+                        },
+                        "chloride_100g": {
+                            "type": "number"
+                        },
+                        "cholesterol": {
+                            "type": "number"
+                        },
+                        "cholesterol_100g": {
+                            "type": "number"
+                        },
+                        "chromium": {
+                            "type": "number"
+                        },
+                        "chromium_100g": {
+                            "type": "number"
+                        },
+                        "copper": {
+                            "type": "number"
+                        },
+                        "copper_100g": {
+                            "type": "number"
+                        },
+                        "dihomo-gamma-linolenic-acid": {
+                            "type": "number"
+                        },
+                        "dihomo-gamma-linolenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "docosahexaenoic-acid": {
+                            "type": "number"
+                        },
+                        "docosahexaenoic-acid_100g": {
+                            "type": "number"
+                        },
+                        "eicosapentaenoic-acid": {
+                            "type": "number"
+                        },
+                        "eicosapentaenoic-acid_100g": {
+                            "type": "number"
+                        },
+                        "elaidic-acid": {
+                            "type": "number"
+                        },
+                        "elaidic-acid_100g": {
                             "type": "number"
                         },
                         "energy": {
@@ -183,201 +312,7 @@ const docTemplate = `{
                         "energy-kcal_100g": {
                             "type": "number"
                         },
-                        "energy-kcal_serving": {
-                            "type": "number"
-                        },
-                        "energy-kcal_unit": {
-                            "type": "string"
-                        },
-                        "energy-kcal_value": {
-                            "type": "number"
-                        },
-                        "energy-kcal_value_computed": {
-                            "type": "number"
-                        },
-                        "energy_100g": {
-                            "type": "number"
-                        },
-                        "energy_serving": {
-                            "type": "number"
-                        },
-                        "energy_unit": {
-                            "type": "string"
-                        },
-                        "energy_value": {
-                            "type": "number"
-                        },
-                        "fat": {
-                            "type": "number"
-                        },
-                        "fat_100g": {
-                            "type": "number"
-                        },
-                        "fat_serving": {
-                            "type": "number"
-                        },
-                        "fat_unit": {
-                            "type": "string"
-                        },
-                        "fat_value": {
-                            "type": "number"
-                        },
-                        "fruits-vegetables-legumes-estimate-from-ingredients_100g": {
-                            "type": "number"
-                        },
-                        "fruits-vegetables-legumes-estimate-from-ingredients_serving": {
-                            "type": "number"
-                        },
-                        "fruits-vegetables-nuts-estimate-from-ingredients_100g": {
-                            "type": "number"
-                        },
-                        "fruits-vegetables-nuts-estimate-from-ingredients_serving": {
-                            "type": "number"
-                        },
-                        "monounsaturated-fat": {
-                            "type": "number"
-                        },
-                        "monounsaturated-fat_100g": {
-                            "type": "number"
-                        },
-                        "monounsaturated-fat_serving": {
-                            "type": "number"
-                        },
-                        "monounsaturated-fat_unit": {
-                            "type": "string"
-                        },
-                        "monounsaturated-fat_value": {
-                            "type": "number"
-                        },
-                        "nova-group": {
-                            "type": "number"
-                        },
-                        "nova-group_100g": {
-                            "type": "number"
-                        },
-                        "nova-group_serving": {
-                            "type": "number"
-                        },
-                        "nutrition-score-fr": {
-                            "type": "number"
-                        },
-                        "nutrition-score-fr_100g": {
-                            "type": "number"
-                        },
-                        "polyunsaturated-fat": {
-                            "type": "number"
-                        },
-                        "polyunsaturated-fat_100g": {
-                            "type": "number"
-                        },
-                        "polyunsaturated-fat_serving": {
-                            "type": "number"
-                        },
-                        "polyunsaturated-fat_unit": {
-                            "type": "string"
-                        },
-                        "polyunsaturated-fat_value": {
-                            "type": "number"
-                        },
-                        "proteins": {
-                            "type": "number"
-                        },
-                        "proteins_100g": {
-                            "type": "number"
-                        },
-                        "proteins_serving": {
-                            "type": "number"
-                        },
-                        "proteins_unit": {
-                            "type": "string"
-                        },
-                        "proteins_value": {
-                            "type": "number"
-                        },
-                        "salt": {
-                            "type": "number"
-                        },
-                        "salt_100g": {
-                            "type": "number"
-                        },
-                        "salt_serving": {
-                            "type": "number"
-                        },
-                        "salt_unit": {
-                            "type": "string"
-                        },
-                        "salt_value": {
-                            "type": "number"
-                        },
-                        "saturated-fat": {
-                            "type": "number"
-                        },
-                        "saturated-fat_100g": {
-                            "type": "number"
-                        },
-                        "saturated-fat_serving": {
-                            "type": "number"
-                        },
-                        "saturated-fat_unit": {
-                            "type": "string"
-                        },
-                        "saturated-fat_value": {
-                            "type": "number"
-                        },
-                        "sodium": {
-                            "type": "number"
-                        },
-                        "sodium_100g": {
-                            "type": "number"
-                        },
-                        "sodium_serving": {
-                            "type": "number"
-                        },
-                        "sodium_unit": {
-                            "type": "string"
-                        },
-                        "sodium_value": {
-                            "type": "number"
-                        },
-                        "trans-fat": {
-                            "type": "number"
-                        },
-                        "trans-fat_100g": {
-                            "type": "number"
-                        },
-                        "trans-fat_serving": {
-                            "type": "number"
-                        },
-                        "trans-fat_unit": {
-                            "type": "string"
-                        },
-                        "trans-fat_value": {
-                            "type": "number"
-                        }
-                    }
-                },
-                "nutriments_estimated": {
-                    "type": "object",
-                    "properties": {
-                        "alcohol_100g": {
-                            "type": "number"
-                        },
-                        "beta-carotene_100g": {
-                            "type": "number"
-                        },
-                        "calcium_100g": {
-                            "type": "number"
-                        },
-                        "carbohydrates_100g": {
-                            "type": "number"
-                        },
-                        "cholesterol_100g": {
-                            "type": "number"
-                        },
-                        "copper_100g": {
-                            "type": "number"
-                        },
-                        "energy-kcal_100g": {
+                        "energy-kj": {
                             "type": "number"
                         },
                         "energy-kj_100g": {
@@ -386,79 +321,328 @@ const docTemplate = `{
                         "energy_100g": {
                             "type": "number"
                         },
+                        "erucic-acid": {
+                            "type": "number"
+                        },
+                        "erucic-acid_100g": {
+                            "type": "number"
+                        },
+                        "fat": {
+                            "type": "number"
+                        },
                         "fat_100g": {
+                            "type": "number"
+                        },
+                        "fiber": {
                             "type": "number"
                         },
                         "fiber_100g": {
                             "type": "number"
                         },
+                        "fluoride": {
+                            "type": "number"
+                        },
+                        "fluoride_100g": {
+                            "type": "number"
+                        },
+                        "fructose": {
+                            "type": "number"
+                        },
                         "fructose_100g": {
                             "type": "number"
                         },
-                        "galactose_100g": {
+                        "fruits-vegetables-nuts": {
+                            "type": "number"
+                        },
+                        "fruits-vegetables-nuts_100g": {
+                            "type": "number"
+                        },
+                        "gamma-linolenic-acid": {
+                            "type": "number"
+                        },
+                        "gamma-linolenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "glucose": {
                             "type": "number"
                         },
                         "glucose_100g": {
                             "type": "number"
                         },
+                        "gondoic-acid": {
+                            "type": "number"
+                        },
+                        "gondoic-acid_100g": {
+                            "type": "number"
+                        },
+                        "iodine": {
+                            "type": "number"
+                        },
                         "iodine_100g": {
+                            "type": "number"
+                        },
+                        "iron": {
                             "type": "number"
                         },
                         "iron_100g": {
                             "type": "number"
                         },
+                        "lactose": {
+                            "type": "number"
+                        },
                         "lactose_100g": {
+                            "type": "number"
+                        },
+                        "lauric-acid": {
+                            "type": "number"
+                        },
+                        "lauric-acid_100g": {
+                            "type": "number"
+                        },
+                        "lignoceric-acid": {
+                            "type": "number"
+                        },
+                        "lignoceric-acid_100g": {
+                            "type": "number"
+                        },
+                        "linoleic-acid": {
+                            "type": "number"
+                        },
+                        "linoleic-acid_100g": {
+                            "type": "number"
+                        },
+                        "magnesium": {
                             "type": "number"
                         },
                         "magnesium_100g": {
                             "type": "number"
                         },
+                        "maltodextrins": {
+                            "type": "number"
+                        },
+                        "maltodextrins_100g": {
+                            "type": "number"
+                        },
+                        "maltose": {
+                            "type": "number"
+                        },
                         "maltose_100g": {
+                            "type": "number"
+                        },
+                        "manganese": {
                             "type": "number"
                         },
                         "manganese_100g": {
                             "type": "number"
                         },
+                        "mead-acid": {
+                            "type": "number"
+                        },
+                        "mead-acid_100g": {
+                            "type": "number"
+                        },
+                        "melissic-acid": {
+                            "type": "number"
+                        },
+                        "melissic-acid_100g": {
+                            "type": "number"
+                        },
+                        "molybdenum": {
+                            "type": "number"
+                        },
+                        "molybdenum_100g": {
+                            "type": "number"
+                        },
+                        "monounsaturated-fat": {
+                            "type": "number"
+                        },
+                        "monounsaturated-fat_100g": {
+                            "type": "number"
+                        },
+                        "montanic-acid": {
+                            "type": "number"
+                        },
+                        "montanic-acid_100g": {
+                            "type": "number"
+                        },
+                        "myristic-acid": {
+                            "type": "number"
+                        },
+                        "myristic-acid_100g": {
+                            "type": "number"
+                        },
+                        "nervonic-acid": {
+                            "type": "number"
+                        },
+                        "nervonic-acid_100g": {
+                            "type": "number"
+                        },
+                        "nucleotides": {
+                            "type": "number"
+                        },
+                        "nucleotides_100g": {
+                            "type": "number"
+                        },
+                        "nutrition-score-fr": {
+                            "type": "number"
+                        },
+                        "nutrition-score-fr_100g": {
+                            "type": "number"
+                        },
+                        "nutrition-score-uk": {
+                            "type": "number"
+                        },
+                        "nutrition-score-uk_100g": {
+                            "type": "number"
+                        },
+                        "oleic-acid": {
+                            "type": "number"
+                        },
+                        "oleic-acid_100g": {
+                            "type": "number"
+                        },
+                        "omega-3-fat": {
+                            "type": "number"
+                        },
+                        "omega-3-fat_100g": {
+                            "type": "number"
+                        },
+                        "omega-6-fat": {
+                            "type": "number"
+                        },
+                        "omega-6-fat_100g": {
+                            "type": "number"
+                        },
+                        "omega-9-fat": {
+                            "type": "number"
+                        },
+                        "omega-9-fat_100g": {
+                            "type": "number"
+                        },
+                        "palmitic-acid": {
+                            "type": "number"
+                        },
+                        "palmitic-acid_100g": {
+                            "type": "number"
+                        },
+                        "pantothenic-acid": {
+                            "type": "number"
+                        },
                         "pantothenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "ph": {
+                            "type": "number"
+                        },
+                        "ph_100g": {
+                            "type": "number"
+                        },
+                        "phosphorus": {
                             "type": "number"
                         },
                         "phosphorus_100g": {
                             "type": "number"
                         },
-                        "phylloquinone_100g": {
+                        "polyols": {
                             "type": "number"
                         },
                         "polyols_100g": {
                             "type": "number"
                         },
+                        "polyunsaturated-fat": {
+                            "type": "number"
+                        },
+                        "polyunsaturated-fat_100g": {
+                            "type": "number"
+                        },
+                        "potassium": {
+                            "type": "number"
+                        },
                         "potassium_100g": {
+                            "type": "number"
+                        },
+                        "proteins": {
                             "type": "number"
                         },
                         "proteins_100g": {
                             "type": "number"
                         },
-                        "salt_100g": {
+                        "saturated-fat": {
                             "type": "number"
                         },
                         "saturated-fat_100g": {
                             "type": "number"
                         },
+                        "selenium": {
+                            "type": "number"
+                        },
                         "selenium_100g": {
+                            "type": "number"
+                        },
+                        "serum-proteins": {
+                            "type": "number"
+                        },
+                        "serum-proteins_100g": {
+                            "type": "number"
+                        },
+                        "silica": {
+                            "type": "number"
+                        },
+                        "silica_100g": {
+                            "type": "number"
+                        },
+                        "sodium": {
                             "type": "number"
                         },
                         "sodium_100g": {
                             "type": "number"
                         },
+                        "starch": {
+                            "type": "number"
+                        },
                         "starch_100g": {
+                            "type": "number"
+                        },
+                        "stearic-acid": {
+                            "type": "number"
+                        },
+                        "stearic-acid_100g": {
+                            "type": "number"
+                        },
+                        "sucrose": {
                             "type": "number"
                         },
                         "sucrose_100g": {
                             "type": "number"
                         },
+                        "sugars": {
+                            "type": "number"
+                        },
                         "sugars_100g": {
                             "type": "number"
                         },
+                        "taurine": {
+                            "type": "number"
+                        },
+                        "taurine_100g": {
+                            "type": "number"
+                        },
+                        "trans-fat": {
+                            "type": "number"
+                        },
+                        "trans-fat_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-a": {
+                            "type": "number"
+                        },
                         "vitamin-a_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-b1": {
+                            "type": "number"
+                        },
+                        "vitamin-b12": {
                             "type": "number"
                         },
                         "vitamin-b12_100g": {
@@ -467,28 +651,606 @@ const docTemplate = `{
                         "vitamin-b1_100g": {
                             "type": "number"
                         },
+                        "vitamin-b2": {
+                            "type": "number"
+                        },
                         "vitamin-b2_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-b6": {
                             "type": "number"
                         },
                         "vitamin-b6_100g": {
                             "type": "number"
                         },
+                        "vitamin-b9": {
+                            "type": "number"
+                        },
                         "vitamin-b9_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-c": {
                             "type": "number"
                         },
                         "vitamin-c_100g": {
                             "type": "number"
                         },
+                        "vitamin-d": {
+                            "type": "number"
+                        },
                         "vitamin-d_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-e": {
                             "type": "number"
                         },
                         "vitamin-e_100g": {
                             "type": "number"
                         },
+                        "vitamin-k": {
+                            "type": "number"
+                        },
+                        "vitamin-k_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-pp": {
+                            "type": "number"
+                        },
                         "vitamin-pp_100g": {
                             "type": "number"
                         },
-                        "water_100g": {
+                        "zinc": {
+                            "type": "number"
+                        },
+                        "zinc_100g": {
+                            "type": "number"
+                        }
+                    }
+                },
+                "nutriments_estimated": {
+                    "type": "object",
+                    "properties": {
+                        "alcohol": {
+                            "type": "number"
+                        },
+                        "alcohol_100g": {
+                            "type": "number"
+                        },
+                        "alpha-linolenic-acid": {
+                            "type": "number"
+                        },
+                        "alpha-linolenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "arachidic-acid": {
+                            "type": "number"
+                        },
+                        "arachidic-acid_100g": {
+                            "type": "number"
+                        },
+                        "behenic-acid": {
+                            "type": "number"
+                        },
+                        "behenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "bicarbonate": {
+                            "type": "number"
+                        },
+                        "bicarbonate_100g": {
+                            "type": "number"
+                        },
+                        "biotin": {
+                            "type": "number"
+                        },
+                        "biotin_100g": {
+                            "type": "number"
+                        },
+                        "butyric-acid": {
+                            "type": "number"
+                        },
+                        "butyric-acid_100g": {
+                            "type": "number"
+                        },
+                        "caffeine": {
+                            "type": "number"
+                        },
+                        "caffeine_100g": {
+                            "type": "number"
+                        },
+                        "calcium": {
+                            "type": "number"
+                        },
+                        "calcium_100g": {
+                            "type": "number"
+                        },
+                        "capric-acid": {
+                            "type": "number"
+                        },
+                        "capric-acid_100g": {
+                            "type": "number"
+                        },
+                        "caproic-acid": {
+                            "type": "number"
+                        },
+                        "caproic-acid_100g": {
+                            "type": "number"
+                        },
+                        "caprylic-acid": {
+                            "type": "number"
+                        },
+                        "caprylic-acid_100g": {
+                            "type": "number"
+                        },
+                        "carbohydrates": {
+                            "type": "number"
+                        },
+                        "carbohydrates_100g": {
+                            "type": "number"
+                        },
+                        "carbon-footprint": {
+                            "type": "number"
+                        },
+                        "carbon-footprint_100g": {
+                            "type": "number"
+                        },
+                        "casein": {
+                            "type": "number"
+                        },
+                        "casein_100g": {
+                            "type": "number"
+                        },
+                        "cerotic-acid": {
+                            "type": "number"
+                        },
+                        "cerotic-acid_100g": {
+                            "type": "number"
+                        },
+                        "chloride": {
+                            "type": "number"
+                        },
+                        "chloride_100g": {
+                            "type": "number"
+                        },
+                        "cholesterol": {
+                            "type": "number"
+                        },
+                        "cholesterol_100g": {
+                            "type": "number"
+                        },
+                        "chromium": {
+                            "type": "number"
+                        },
+                        "chromium_100g": {
+                            "type": "number"
+                        },
+                        "copper": {
+                            "type": "number"
+                        },
+                        "copper_100g": {
+                            "type": "number"
+                        },
+                        "dihomo-gamma-linolenic-acid": {
+                            "type": "number"
+                        },
+                        "dihomo-gamma-linolenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "docosahexaenoic-acid": {
+                            "type": "number"
+                        },
+                        "docosahexaenoic-acid_100g": {
+                            "type": "number"
+                        },
+                        "eicosapentaenoic-acid": {
+                            "type": "number"
+                        },
+                        "eicosapentaenoic-acid_100g": {
+                            "type": "number"
+                        },
+                        "elaidic-acid": {
+                            "type": "number"
+                        },
+                        "elaidic-acid_100g": {
+                            "type": "number"
+                        },
+                        "energy": {
+                            "type": "number"
+                        },
+                        "energy-kcal": {
+                            "type": "number"
+                        },
+                        "energy-kcal_100g": {
+                            "type": "number"
+                        },
+                        "energy-kj": {
+                            "type": "number"
+                        },
+                        "energy-kj_100g": {
+                            "type": "number"
+                        },
+                        "energy_100g": {
+                            "type": "number"
+                        },
+                        "erucic-acid": {
+                            "type": "number"
+                        },
+                        "erucic-acid_100g": {
+                            "type": "number"
+                        },
+                        "fat": {
+                            "type": "number"
+                        },
+                        "fat_100g": {
+                            "type": "number"
+                        },
+                        "fiber": {
+                            "type": "number"
+                        },
+                        "fiber_100g": {
+                            "type": "number"
+                        },
+                        "fluoride": {
+                            "type": "number"
+                        },
+                        "fluoride_100g": {
+                            "type": "number"
+                        },
+                        "fructose": {
+                            "type": "number"
+                        },
+                        "fructose_100g": {
+                            "type": "number"
+                        },
+                        "fruits-vegetables-nuts": {
+                            "type": "number"
+                        },
+                        "fruits-vegetables-nuts_100g": {
+                            "type": "number"
+                        },
+                        "gamma-linolenic-acid": {
+                            "type": "number"
+                        },
+                        "gamma-linolenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "glucose": {
+                            "type": "number"
+                        },
+                        "glucose_100g": {
+                            "type": "number"
+                        },
+                        "gondoic-acid": {
+                            "type": "number"
+                        },
+                        "gondoic-acid_100g": {
+                            "type": "number"
+                        },
+                        "iodine": {
+                            "type": "number"
+                        },
+                        "iodine_100g": {
+                            "type": "number"
+                        },
+                        "iron": {
+                            "type": "number"
+                        },
+                        "iron_100g": {
+                            "type": "number"
+                        },
+                        "lactose": {
+                            "type": "number"
+                        },
+                        "lactose_100g": {
+                            "type": "number"
+                        },
+                        "lauric-acid": {
+                            "type": "number"
+                        },
+                        "lauric-acid_100g": {
+                            "type": "number"
+                        },
+                        "lignoceric-acid": {
+                            "type": "number"
+                        },
+                        "lignoceric-acid_100g": {
+                            "type": "number"
+                        },
+                        "linoleic-acid": {
+                            "type": "number"
+                        },
+                        "linoleic-acid_100g": {
+                            "type": "number"
+                        },
+                        "magnesium": {
+                            "type": "number"
+                        },
+                        "magnesium_100g": {
+                            "type": "number"
+                        },
+                        "maltodextrins": {
+                            "type": "number"
+                        },
+                        "maltodextrins_100g": {
+                            "type": "number"
+                        },
+                        "maltose": {
+                            "type": "number"
+                        },
+                        "maltose_100g": {
+                            "type": "number"
+                        },
+                        "manganese": {
+                            "type": "number"
+                        },
+                        "manganese_100g": {
+                            "type": "number"
+                        },
+                        "mead-acid": {
+                            "type": "number"
+                        },
+                        "mead-acid_100g": {
+                            "type": "number"
+                        },
+                        "melissic-acid": {
+                            "type": "number"
+                        },
+                        "melissic-acid_100g": {
+                            "type": "number"
+                        },
+                        "molybdenum": {
+                            "type": "number"
+                        },
+                        "molybdenum_100g": {
+                            "type": "number"
+                        },
+                        "monounsaturated-fat": {
+                            "type": "number"
+                        },
+                        "monounsaturated-fat_100g": {
+                            "type": "number"
+                        },
+                        "montanic-acid": {
+                            "type": "number"
+                        },
+                        "montanic-acid_100g": {
+                            "type": "number"
+                        },
+                        "myristic-acid": {
+                            "type": "number"
+                        },
+                        "myristic-acid_100g": {
+                            "type": "number"
+                        },
+                        "nervonic-acid": {
+                            "type": "number"
+                        },
+                        "nervonic-acid_100g": {
+                            "type": "number"
+                        },
+                        "nucleotides": {
+                            "type": "number"
+                        },
+                        "nucleotides_100g": {
+                            "type": "number"
+                        },
+                        "nutrition-score-fr": {
+                            "type": "number"
+                        },
+                        "nutrition-score-fr_100g": {
+                            "type": "number"
+                        },
+                        "nutrition-score-uk": {
+                            "type": "number"
+                        },
+                        "nutrition-score-uk_100g": {
+                            "type": "number"
+                        },
+                        "oleic-acid": {
+                            "type": "number"
+                        },
+                        "oleic-acid_100g": {
+                            "type": "number"
+                        },
+                        "omega-3-fat": {
+                            "type": "number"
+                        },
+                        "omega-3-fat_100g": {
+                            "type": "number"
+                        },
+                        "omega-6-fat": {
+                            "type": "number"
+                        },
+                        "omega-6-fat_100g": {
+                            "type": "number"
+                        },
+                        "omega-9-fat": {
+                            "type": "number"
+                        },
+                        "omega-9-fat_100g": {
+                            "type": "number"
+                        },
+                        "palmitic-acid": {
+                            "type": "number"
+                        },
+                        "palmitic-acid_100g": {
+                            "type": "number"
+                        },
+                        "pantothenic-acid": {
+                            "type": "number"
+                        },
+                        "pantothenic-acid_100g": {
+                            "type": "number"
+                        },
+                        "ph": {
+                            "type": "number"
+                        },
+                        "ph_100g": {
+                            "type": "number"
+                        },
+                        "phosphorus": {
+                            "type": "number"
+                        },
+                        "phosphorus_100g": {
+                            "type": "number"
+                        },
+                        "polyols": {
+                            "type": "number"
+                        },
+                        "polyols_100g": {
+                            "type": "number"
+                        },
+                        "polyunsaturated-fat": {
+                            "type": "number"
+                        },
+                        "polyunsaturated-fat_100g": {
+                            "type": "number"
+                        },
+                        "potassium": {
+                            "type": "number"
+                        },
+                        "potassium_100g": {
+                            "type": "number"
+                        },
+                        "proteins": {
+                            "type": "number"
+                        },
+                        "proteins_100g": {
+                            "type": "number"
+                        },
+                        "saturated-fat": {
+                            "type": "number"
+                        },
+                        "saturated-fat_100g": {
+                            "type": "number"
+                        },
+                        "selenium": {
+                            "type": "number"
+                        },
+                        "selenium_100g": {
+                            "type": "number"
+                        },
+                        "serum-proteins": {
+                            "type": "number"
+                        },
+                        "serum-proteins_100g": {
+                            "type": "number"
+                        },
+                        "silica": {
+                            "type": "number"
+                        },
+                        "silica_100g": {
+                            "type": "number"
+                        },
+                        "sodium": {
+                            "type": "number"
+                        },
+                        "sodium_100g": {
+                            "type": "number"
+                        },
+                        "starch": {
+                            "type": "number"
+                        },
+                        "starch_100g": {
+                            "type": "number"
+                        },
+                        "stearic-acid": {
+                            "type": "number"
+                        },
+                        "stearic-acid_100g": {
+                            "type": "number"
+                        },
+                        "sucrose": {
+                            "type": "number"
+                        },
+                        "sucrose_100g": {
+                            "type": "number"
+                        },
+                        "sugars": {
+                            "type": "number"
+                        },
+                        "sugars_100g": {
+                            "type": "number"
+                        },
+                        "taurine": {
+                            "type": "number"
+                        },
+                        "taurine_100g": {
+                            "type": "number"
+                        },
+                        "trans-fat": {
+                            "type": "number"
+                        },
+                        "trans-fat_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-a": {
+                            "type": "number"
+                        },
+                        "vitamin-a_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-b1": {
+                            "type": "number"
+                        },
+                        "vitamin-b12": {
+                            "type": "number"
+                        },
+                        "vitamin-b12_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-b1_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-b2": {
+                            "type": "number"
+                        },
+                        "vitamin-b2_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-b6": {
+                            "type": "number"
+                        },
+                        "vitamin-b6_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-b9": {
+                            "type": "number"
+                        },
+                        "vitamin-b9_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-c": {
+                            "type": "number"
+                        },
+                        "vitamin-c_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-d": {
+                            "type": "number"
+                        },
+                        "vitamin-d_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-e": {
+                            "type": "number"
+                        },
+                        "vitamin-e_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-k": {
+                            "type": "number"
+                        },
+                        "vitamin-k_100g": {
+                            "type": "number"
+                        },
+                        "vitamin-pp": {
+                            "type": "number"
+                        },
+                        "vitamin-pp_100g": {
+                            "type": "number"
+                        },
+                        "zinc": {
                             "type": "number"
                         },
                         "zinc_100g": {

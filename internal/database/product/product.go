@@ -4,6 +4,7 @@ type Product struct {
 	ID_         string `json:"_id" bson:"_id"`
 	Brands      string `json:"brands" bson:"brands"`
 	ProductName string `json:"product_name" bson:"product_name"`
+	Quantity    string `json:"quantity" bson:"quantity"`
 	Nutriments  struct {
 		SaturatedFat                                          float64 `json:"saturated-fat" bson:"saturated-fat,truncate"`
 		SodiumValue                                           float64 `json:"sodium_value" bson:"sodium_value,truncate"`

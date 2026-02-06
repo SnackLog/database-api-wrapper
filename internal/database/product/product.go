@@ -194,7 +194,7 @@ type Product struct {
 		NovaGroup                                          float64 `json:"nova-group" bson:"nova-group,truncate"`
 		Phylloquinone_100g                                 float64 `json:"phylloquinone_100g" bson:"phylloquinone_100g"`
 		Water_100g                                         float64 `json:"water_100g" bson:"water_100g"`
-	}
+	} `json:"nutriments" bson:"nutriments"`
 	NutrimentsEstimated struct {
 		Energy100g                   float64 `json:"energy_100g" bson:"energy_100g"`
 		Energy                       float64 `json:"energy" bson:"energy"`
